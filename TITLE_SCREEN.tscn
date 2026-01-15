@@ -26,6 +26,8 @@ offset_right = 685.0
 offset_bottom = 522.0
 text = "QUIT"
 
+[node name="test" type="Node" parent="."]
+
 [connection signal="button_down" from="PLAY" to="." method="_on_play_button_down"]
 [connection signal="button_down" from="SETTINGS" to="." method="_on_settings_button_down"]
 [connection signal="button_down" from="QUIT" to="." method="_on_quit_button_down"]
