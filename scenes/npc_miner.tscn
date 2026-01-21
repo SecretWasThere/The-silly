@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dffcq0ob734kh"]
+
+[ext_resource type="Texture2D" uid="uid://caevcq2e8kxxe" path="res://sprites/miner.png" id="1_0u0ms"]
+[ext_resource type="Script" uid="uid://dr5kcu0o6jb75" path="res://scenes/npc_miner.gd" id="1_11ktj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gk14i"]
+size = Vector2(72.20648, 123)
+
+[node name="NPC_Miner" type="CharacterBody2D"]
+scale = Vector2(0.4431735, 0.4431735)
+script = ExtResource("1_11ktj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -5
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_gk14i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.8146973e-06, -3.8146973e-06)
+scale = Vector2(3.9487922, 3.9487922)
+texture = ExtResource("1_0u0ms")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

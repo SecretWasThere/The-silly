@@ -23,3 +23,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_question_pressed() -> void:
+	get_tree().change_scene_to_file("res://level_2.tscn")

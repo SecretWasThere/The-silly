@@ -1,8 +1,13 @@
-[gd_scene load_steps=6 format=4 uid="uid://ry6vvuybdew"]
+[gd_scene load_steps=11 format=4 uid="uid://ry6vvuybdew"]
 
 [ext_resource type="PackedScene" uid="uid://c7o4umiu4fwmh" path="res://scenes/PLAYER.tscn" id="1_oojl2"]
 [ext_resource type="Texture2D" uid="uid://bedcq2atky77u" path="res://sprites/grass.png" id="2_342el"]
-[ext_resource type="Texture2D" uid="uid://b3gdv1tnxd5es" path="res://New Piskel.png" id="3_342el"]
+[ext_resource type="Texture2D" uid="uid://b3gdv1tnxd5es" path="res://sprites/New Piskel.png" id="3_342el"]
+[ext_resource type="PackedScene" uid="uid://dffcq0ob734kh" path="res://scenes/npc_miner.tscn" id="4_6qnmn"]
+[ext_resource type="Texture2D" uid="uid://bopnhublgofnh" path="res://sprites/nooby.png" id="5_u1epy"]
+[ext_resource type="Texture2D" uid="uid://1rmotd4nakh6" path="res://sprites/i omor.png" id="6_stcqu"]
+[ext_resource type="Script" uid="uid://bhwfwarnbojtv" path="res://scenes/button.gd" id="7_gnpqm"]
+[ext_resource type="Texture2D" uid="uid://dt8vg2ohe88qi" path="res://sprites/onto lv 2.png" id="8_saon2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oojl2"]
 texture = ExtResource("2_342el")
@@ -58,3 +63,64 @@ tile_set = SubResource("TileSet_u1epy")
 position = Vector2(2893, 175)
 rotation = 1.5707964
 texture = ExtResource("3_342el")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -806.0
+offset_top = -656.0
+offset_right = 19896.0
+offset_bottom = 2042.0
+color = Color(0.46666667, 0.70980394, 0.99607843, 1)
+
+[node name="NPC_Miner" parent="." instance=ExtResource("4_6qnmn")]
+position = Vector2(2890, 1702)
+
+[node name="Label" type="Label" parent="NPC_Miner"]
+offset_left = -85.74519
+offset_top = -88.00165
+offset_right = 99.25481
+offset_bottom = -65.00165
+text = "I YEARN FOR THE MINES"
+
+[node name="Nooby" type="Sprite2D" parent="."]
+position = Vector2(2373, 390)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("5_u1epy")
+
+[node name="Label" type="Label" parent="Nooby"]
+offset_left = -13.000076
+offset_top = -37.0
+offset_right = 171.99992
+offset_bottom = -14.0
+text = "oof"
+
+[node name="IOmor" type="Sprite2D" parent="."]
+position = Vector2(1064.0001, 422)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("6_stcqu")
+
+[node name="Label" type="Label" parent="IOmor"]
+offset_left = -25.714357
+offset_top = -56.0
+offset_right = 563.28564
+offset_bottom = 45.0
+scale = Vector2(0.38508117, 0.378324)
+text = "There's something 
+going on over there 
+at the village. You 
+should check it out"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 8905.0
+offset_top = 411.0
+offset_right = 8913.0
+offset_bottom = 419.0
+scale = Vector2(4.2532544, 4.2922306)
+script = ExtResource("7_gnpqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Button"]
+position = Vector2(4.2321634, 4.193627)
+scale = Vector2(0.23511407, 0.23297907)
+texture = ExtResource("8_saon2")
+
+[connection signal="pressed" from="Button" to="PLAYER" method="_on_question_pressed"]
