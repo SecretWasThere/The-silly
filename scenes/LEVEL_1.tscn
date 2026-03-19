@@ -19,7 +19,7 @@
 size = Vector2(65.714355, 52.000015)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhh1w"]
-size = Vector2(140.57137, 71.42858)
+size = Vector2(77.14305, 66)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u87iv"]
 
@@ -78,6 +78,7 @@ size = Vector2(257, 33)
 size = Vector2(372, 32)
 
 [node name="LEVEL_1" type="Node2D" unique_id=1725549911]
+show_behind_parent = true
 
 [node name="PLAYER" parent="." unique_id=703367722 instance=ExtResource("1_oojl2")]
 z_index = 1
@@ -90,7 +91,7 @@ rotation = 1.5707964
 texture = ExtResource("3_342el")
 
 [node name="M detection" type="Area2D" parent="." unique_id=1883776075]
-position = Vector2(2890, 1702)
+position = Vector2(669, 664.9999)
 scale = Vector2(0.4431735, 0.4431735)
 script = ExtResource("4_htmek")
 
@@ -98,18 +99,21 @@ script = ExtResource("4_htmek")
 scale = Vector2(1, 1)
 
 [node name="M message" type="Label" parent="M detection" unique_id=1942358880]
+visible = false
 offset_left = -85.74512
 offset_top = -88.001465
 offset_right = 99.25488
 offset_bottom = -65.001465
 text = "I YEARN FOR THE MINES"
+metadata/_edit_use_anchors_ = true
 
 [node name="M Fake" type="Label" parent="M detection" unique_id=1750123347]
+visible = false
 offset_left = -85.74512
 offset_top = -88.001465
 offset_right = 99.25488
 offset_bottom = -65.001465
-text = "I YEARN FOR THE MINES"
+metadata/_edit_use_anchors_ = true
 
 [node name="M hitbox" type="CollisionShape2D" parent="M detection" unique_id=2133880954]
 position = Vector2(6.76947, -4.5129395)
@@ -117,7 +121,7 @@ scale = Vector2(3.9487915, 3.9487915)
 shape = SubResource("RectangleShape2D_htmek")
 
 [node name="N detection" type="Area2D" parent="." unique_id=1652059627]
-position = Vector2(2373, 390)
+position = Vector2(104.000244, 90.00003)
 scale = Vector2(1.75, 1.75)
 script = ExtResource("5_rhq48")
 
@@ -152,19 +156,19 @@ script = ExtResource("8_htmek")
 
 [node name="IM prompt" type="Label" parent="IM detection" unique_id=1567443537]
 visible = false
-offset_left = -35.616455
-offset_top = -77.18611
-offset_right = 553.38354
-offset_bottom = 23.813889
+offset_left = -513.7145
+offset_top = -63.428566
+offset_right = -417.25964
+offset_bottom = 37.571434
 scale = Vector2(0.38508117, 0.378324)
 text = "Press E"
 
 [node name="IM message" type="Label" parent="IM detection" unique_id=171491279]
 visible = false
-offset_left = -25.714355
-offset_top = -55.999985
-offset_right = 563.28564
-offset_bottom = 45.000015
+offset_left = -512.0002
+offset_top = -49.71427
+offset_right = -351.73724
+offset_bottom = 51.28573
 scale = Vector2(0.38508117, 0.378324)
 text = "There's something 
 going on over there 
@@ -172,13 +176,13 @@ at the village. You
 should check it out"
 
 [node name="IOmor" type="Sprite2D" parent="IM detection" unique_id=1038909669]
-position = Vector2(434.2856, 130.85713)
+position = Vector2(-482.85718, 8.000015)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("6_stcqu")
 
 [node name="IM hitbox" type="CollisionShape2D" parent="IM detection" unique_id=1672923242]
-position = Vector2(431.4285, 132.00002)
-scale = Vector2(0.99999976, 0.99999976)
+position = Vector2(-482.2858, 12.000015)
+scale = Vector2(0.9999996, 0.9999996)
 shape = SubResource("RectangleShape2D_dhh1w")
 
 [node name="Button" type="Button" parent="." unique_id=226802403]
@@ -271,7 +275,7 @@ position = Vector2(1077, 668.5)
 shape = SubResource("RectangleShape2D_baql0")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=103115376]
-position = Vector2(1186, 496)
+position = Vector2(1188, 497)
 shape = SubResource("RectangleShape2D_ajvnq")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" unique_id=353180529]
