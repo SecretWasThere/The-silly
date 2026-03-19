@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://uv2pllto0vyk"
+path="res://.godot/imported/vgd level 2_2.ogg-4e4728ee5dae1da67abd7070e7a178db.oggvorbisstr"
+
+[deps]
+
+source_file="res://scenes/vgd level 2_2.ogg"
+dest_files=["res://.godot/imported/vgd level 2_2.ogg-4e4728ee5dae1da67abd7070e7a178db.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

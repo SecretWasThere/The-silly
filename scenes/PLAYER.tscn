@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7o4umiu4fwmh"]
+[gd_scene format=3 uid="uid://c7o4umiu4fwmh"]
 
 [ext_resource type="Script" uid="uid://bao0wcgfcut8u" path="res://gd/PLAYER.gd" id="1_x3g1t"]
 [ext_resource type="Texture2D" uid="uid://bbeecvw3q1sam" path="res://sprites/guy.png" id="2_3lut5"]
@@ -6,22 +6,23 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gk14i"]
 size = Vector2(74.46294, 123)
 
-[node name="PLAYER" type="CharacterBody2D"]
+[node name="PLAYER" type="CharacterBody2D" unique_id=1145208167]
 scale = Vector2(0.4431735, 0.4431735)
 script = ExtResource("1_x3g1t")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=619300425]
 position = Vector2(-1.1282274, 0.5)
 shape = SubResource("RectangleShape2D_gk14i")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1589055392]
 position = Vector2(-3.8146973e-06, -3.8146973e-06)
 scale = Vector2(3.9487922, 3.9487922)
 texture = ExtResource("2_3lut5")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(212.10655, -223.38881)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1290432424]
+position = Vector2(63.18066, -232.41464)
 scale = Vector2(0.2774074, 0.2779376)
 zoom = Vector2(1.5, 1.5)
 limit_smoothed = true
 position_smoothing_enabled = true
+position_smoothing_speed = 7.0
