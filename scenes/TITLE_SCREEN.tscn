@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://6eppcuhob63f"]
+[gd_scene load_steps=6 format=3 uid="uid://6eppcuhob63f"]
 
 [ext_resource type="Script" uid="uid://dq0erey2rwrum" path="res://gd/MAIN_UI.gd" id="1_d1oq2"]
-[ext_resource type="Texture2D" uid="uid://cpc552twiftcq" path="res://sprites/run.webp" id="2_oti0j"]
-[ext_resource type="Texture2D" uid="uid://b3xcqlili4t4c" path="res://sprites/esc.webp" id="3_m8380"]
+[ext_resource type="Texture2D" uid="uid://cfnqicgi7uryu" path="res://sprites/runn.webp" id="2_3gkl5"]
+[ext_resource type="Texture2D" uid="uid://bdjkers5srsbl" path="res://sprites/exit.webp" id="3_5eo5y"]
 [ext_resource type="Texture2D" uid="uid://b3ia13xx3ata8" path="res://green.png" id="4_m8380"]
+[ext_resource type="Texture2D" uid="uid://bji1eheossvng" path="res://sprites/IMG_1873.webp" id="5_1x4rj"]
 
 [node name="TITLE_SCREEN" type="Node2D"]
 script = ExtResource("1_d1oq2")
@@ -17,8 +18,8 @@ scale = Vector2(0.76717764, 1.440552)
 
 [node name="Sprite2D" type="Sprite2D" parent="PLAY"]
 position = Vector2(142.07918, 34.708946)
-scale = Vector2(4.432391, 2.404817)
-texture = ExtResource("2_oti0j")
+scale = Vector2(3, 1.628)
+texture = ExtResource("2_3gkl5")
 
 [node name="SETTINGS" type="Button" parent="."]
 visible = false
@@ -39,16 +40,22 @@ text = "QUIT"
 
 [node name="Sprite2D" type="Sprite2D" parent="QUIT"]
 position = Vector2(87.99997, 38.000015)
-scale = Vector2(3.312501, 3.312501)
-texture = ExtResource("3_m8380")
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("3_5eo5y")
 
 [node name="test" type="Node" parent="."]
 
 [node name="green" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(52, 380)
+position = Vector2(94, 400)
 scale = Vector2(1091.3129, -207.96759)
 texture = ExtResource("4_m8380")
+
+[node name="Img1873" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(586, 335)
+scale = Vector2(1.0618467, 1.0387756)
+texture = ExtResource("5_1x4rj")
 
 [connection signal="button_down" from="PLAY" to="." method="_on_play_button_down"]
 [connection signal="button_down" from="SETTINGS" to="." method="_on_settings_button_down"]

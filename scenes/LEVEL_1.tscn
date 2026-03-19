@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ry6vvuybdew"]
+[gd_scene load_steps=36 format=3 uid="uid://ry6vvuybdew"]
 
 [ext_resource type="PackedScene" uid="uid://c7o4umiu4fwmh" path="res://scenes/PLAYER.tscn" id="1_oojl2"]
 [ext_resource type="Texture2D" uid="uid://b3gdv1tnxd5es" path="res://sprites/New Piskel.png" id="3_342el"]
@@ -77,28 +77,28 @@ size = Vector2(257, 33)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j5r3c"]
 size = Vector2(372, 32)
 
-[node name="LEVEL_1" type="Node2D" unique_id=1725549911]
+[node name="LEVEL_1" type="Node2D"]
 show_behind_parent = true
 
-[node name="PLAYER" parent="." unique_id=703367722 instance=ExtResource("1_oojl2")]
+[node name="PLAYER" parent="." instance=ExtResource("1_oojl2")]
 z_index = 1
 position = Vector2(-279, 412)
 scale = Vector2(0.5, 0.5)
 
-[node name="go down" type="Sprite2D" parent="." unique_id=2134827861]
+[node name="go down" type="Sprite2D" parent="."]
 position = Vector2(2893, 175)
 rotation = 1.5707964
 texture = ExtResource("3_342el")
 
-[node name="M detection" type="Area2D" parent="." unique_id=1883776075]
+[node name="M detection" type="Area2D" parent="."]
 position = Vector2(669, 664.9999)
 scale = Vector2(0.4431735, 0.4431735)
 script = ExtResource("4_htmek")
 
-[node name="NPC_Miner" parent="M detection" unique_id=1540457178 instance=ExtResource("4_6qnmn")]
+[node name="NPC_Miner" parent="M detection" instance=ExtResource("4_6qnmn")]
 scale = Vector2(1, 1)
 
-[node name="M message" type="Label" parent="M detection" unique_id=1942358880]
+[node name="M message" type="Label" parent="M detection"]
 visible = false
 offset_left = -85.74512
 offset_top = -88.001465
@@ -107,7 +107,7 @@ offset_bottom = -65.001465
 text = "I YEARN FOR THE MINES"
 metadata/_edit_use_anchors_ = true
 
-[node name="M Fake" type="Label" parent="M detection" unique_id=1750123347]
+[node name="M Fake" type="Label" parent="M detection"]
 visible = false
 offset_left = -85.74512
 offset_top = -88.001465
@@ -115,21 +115,21 @@ offset_right = 99.25488
 offset_bottom = -65.001465
 metadata/_edit_use_anchors_ = true
 
-[node name="M hitbox" type="CollisionShape2D" parent="M detection" unique_id=2133880954]
+[node name="M hitbox" type="CollisionShape2D" parent="M detection"]
 position = Vector2(6.76947, -4.5129395)
 scale = Vector2(3.9487915, 3.9487915)
 shape = SubResource("RectangleShape2D_htmek")
 
-[node name="N detection" type="Area2D" parent="." unique_id=1652059627]
+[node name="N detection" type="Area2D" parent="."]
 position = Vector2(104.000244, 90.00003)
 scale = Vector2(1.75, 1.75)
 script = ExtResource("5_rhq48")
 
-[node name="Nooby" type="Sprite2D" parent="N detection" unique_id=1206118322]
+[node name="Nooby" type="Sprite2D" parent="N detection"]
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("5_u1epy")
 
-[node name="N message" type="Label" parent="N detection" unique_id=808660726]
+[node name="N message" type="Label" parent="N detection"]
 visible = false
 offset_left = -13.000122
 offset_top = -37.0
@@ -137,33 +137,33 @@ offset_right = 171.99988
 offset_bottom = -14.0
 text = "oof"
 
-[node name="N Fake" type="Label" parent="N detection" unique_id=176836821]
+[node name="N Fake" type="Label" parent="N detection"]
 visible = false
 offset_left = -13.000122
 offset_top = -37.0
 offset_right = 171.99988
 offset_bottom = -14.0
 
-[node name="N hitbox" type="CollisionShape2D" parent="N detection" unique_id=976854711]
+[node name="N hitbox" type="CollisionShape2D" parent="N detection"]
 position = Vector2(3.0517578e-05, -6.2857184)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_htmek")
 
-[node name="IM detection" type="Area2D" parent="." unique_id=637419431]
+[node name="IM detection" type="Area2D" parent="."]
 position = Vector2(1064.0001, 422)
 scale = Vector2(1.75, 1.75)
 script = ExtResource("8_htmek")
 
-[node name="IM prompt" type="Label" parent="IM detection" unique_id=1567443537]
+[node name="IM prompt" type="Label" parent="IM detection"]
 visible = false
 offset_left = -513.7145
 offset_top = -63.428566
 offset_right = -417.25964
 offset_bottom = 37.571434
 scale = Vector2(0.38508117, 0.378324)
-text = "Press E"
+text = "Press E to talk to NPCs"
 
-[node name="IM message" type="Label" parent="IM detection" unique_id=171491279]
+[node name="IM message" type="Label" parent="IM detection"]
 visible = false
 offset_left = -512.0002
 offset_top = -49.71427
@@ -172,20 +172,20 @@ offset_bottom = 51.28573
 scale = Vector2(0.38508117, 0.378324)
 text = "There's something 
 going on over there 
-at the village. You 
-should check it out"
+to the right. You 
+should talk to other people and then check it out"
 
-[node name="IOmor" type="Sprite2D" parent="IM detection" unique_id=1038909669]
+[node name="IOmor" type="Sprite2D" parent="IM detection"]
 position = Vector2(-482.85718, 8.000015)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("6_stcqu")
 
-[node name="IM hitbox" type="CollisionShape2D" parent="IM detection" unique_id=1672923242]
+[node name="IM hitbox" type="CollisionShape2D" parent="IM detection"]
 position = Vector2(-482.2858, 12.000015)
 scale = Vector2(0.9999996, 0.9999996)
 shape = SubResource("RectangleShape2D_dhh1w")
 
-[node name="Button" type="Button" parent="." unique_id=226802403]
+[node name="Button" type="Button" parent="."]
 offset_left = 1364.0
 offset_top = 300.99997
 offset_right = 1372.0
@@ -194,7 +194,7 @@ scale = Vector2(4.2532544, 4.2922306)
 action_mode = 0
 script = ExtResource("7_gnpqm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Button" unique_id=78267182]
+[node name="Sprite2D" type="Sprite2D" parent="Button"]
 light_mask = 0
 visibility_layer = 4
 z_index = 8
@@ -202,103 +202,103 @@ position = Vector2(4.1146064, 4.193627)
 scale = Vector2(0.22776675, 0.23297907)
 texture = ExtResource("8_saon2")
 
-[node name="Bg" type="Sprite2D" parent="." unique_id=1573075995]
+[node name="Bg" type="Sprite2D" parent="."]
 z_index = -16
 position = Vector2(427.99997, 315)
 scale = Vector2(1.4984733, 1.6019071)
 texture = ExtResource("11_dhh1w")
 
-[node name="Lv1Floor" type="Sprite2D" parent="." unique_id=1503679230]
+[node name="Lv1Floor" type="Sprite2D" parent="."]
 position = Vector2(427, 366)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("12_u87iv")
 
-[node name="tee" type="Sprite2D" parent="." unique_id=641936494]
+[node name="tee" type="Sprite2D" parent="."]
 z_index = -6
 position = Vector2(427, 372)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_u87iv")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1942530095]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_u87iv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1001422800]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(428.5, 842.25)
 shape = SubResource("RectangleShape2D_u87iv")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1104751902]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-300.75, 577)
 shape = SubResource("RectangleShape2D_we7t3")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2090431280]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-67.5, 448)
 shape = SubResource("RectangleShape2D_phg8g")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=554715719]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-396.75, 256)
 shape = SubResource("RectangleShape2D_ah8x2")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=581582378]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-189.5, 282.5)
 shape = SubResource("RectangleShape2D_62whr")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=2071094942]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-60.5, 282.75)
 shape = SubResource("RectangleShape2D_dce1d")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1534939597]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(267.25, 681)
 shape = SubResource("RectangleShape2D_jiup0")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=852220518]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(437, 346)
 shape = SubResource("RectangleShape2D_gierd")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" unique_id=1395401811]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(317.5, 653)
 shape = SubResource("RectangleShape2D_e52nj")
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" unique_id=1917231550]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(286, 622)
 shape = SubResource("RectangleShape2D_pm2is")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=1377714680]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(315.5, 565.5)
 shape = SubResource("RectangleShape2D_my5cm")
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D" unique_id=1070677747]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(340.25, 489.5)
 shape = SubResource("RectangleShape2D_ay56w")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=1996757837]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1077, 668.5)
 shape = SubResource("RectangleShape2D_baql0")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=103115376]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1188, 497)
 shape = SubResource("RectangleShape2D_ajvnq")
 
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" unique_id=353180529]
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1427, 344)
 shape = SubResource("RectangleShape2D_6sxe0")
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D" unique_id=397119445]
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-565, 307.5)
 shape = SubResource("RectangleShape2D_6sxe0")
 
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D" unique_id=1145176097]
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(55.5, 132.5)
 shape = SubResource("RectangleShape2D_5aled")
 
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D" unique_id=190741233]
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-217.5, 60.5)
 shape = SubResource("RectangleShape2D_1cpe0")
 
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D" unique_id=1775062141]
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(747, 125)
 shape = SubResource("RectangleShape2D_j5r3c")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2070703928]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_we7t3")
 autoplay = true
 
