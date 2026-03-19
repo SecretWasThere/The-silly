@@ -27,3 +27,11 @@ func _physics_process(delta: float) -> void:
 
 func _on_question_pressed() -> void:
 	get_tree().change_scene_to_file("res://level_2.tscn")
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://level_3.tscn")
+
+
+func _on_final_button_pressed() -> void:
+	pass # Replace with function body.
